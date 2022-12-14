@@ -58,7 +58,7 @@
     <!-- /Bootstrap-link -->
 </head>
 <body>
-    <ul class="container-md">
+    <ul class="container">
         <?php foreach ($hotels as $key => $hotel) { ?>
             <h3><?php echo $hotel['name']; ?></h3>
             <li><?php echo $hotel['description']; ?></li>
@@ -67,24 +67,36 @@
             <li><?php echo $hotel['distance_to_center']; ?></li>
         <?php } ?>
     </ul>
-
+    
     <table class="table">
         <?php foreach ($hotels as $key => $hotel) { ?>
             <thead>           
                 <tr>               
-                    <th scope="col"><?php echo $hotel['name']; ?></th>
+                    <th scope="col">Nome Hotel:</th>
+                    <th><?php echo $hotel['name']; ?></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>           
+                <tr>  
+                    <th scope="col">Descrizione:</th>         
                     <td><?php echo $hotel['description']; ?></td>
+                </tr>
+                <tr>  
+                    <th scope="col">Parking:</th>         
                     <td><?php echo $hotel['parking']; ?></td>
+                </tr>
+                <tr>  
+                    <th scope="col">Voto:</th>         
                     <td><?php echo $hotel['vote']; ?></td>
+                </tr>
+                <tr>  
+                    <th scope="col">Distanza dal centro:</th>         
                     <td><?php echo $hotel['distance_to_center']; ?></td>
-                </tr>           
+                </tr>                           
             </tbody>
         <?php } ?>
     </table>
+    
 </body>
 </html>
 
