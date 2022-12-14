@@ -40,6 +40,8 @@
 
     ];
 
+    foreach ($hotels as $key => $hotel)
+    var_dump($hotel);
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +53,15 @@
     <title>PHP Hotel</title>
 </head>
 <body>
-    
+    <ul>
+        <?php foreach ($hotels as $key => $hotel) { ?>
+            <h3><?php echo $hotel['name']; ?></h3>
+            <li><?php echo $hotel['description']; ?></li>
+            <li><?php echo $hotel['parking']; ?></li>
+            <li><?php echo $hotel['vote']; ?></li>
+            <li><?php echo $hotel['distance_to_center']; ?></li>
+        <?php } ?>
+    </ul>
 </body>
 </html>
 
