@@ -43,9 +43,7 @@
     foreach ($hotels as $key => $hotel)
     var_dump($hotel);
 
-    if( $hotel["parking"] == false){
-        $hotel["parking"] == null;
-    }
+    
 ?>
 
 <!DOCTYPE html>
