@@ -42,6 +42,10 @@
 
     foreach ($hotels as $key => $hotel)
     var_dump($hotel);
+
+    if( $hotel["parking"] == false){
+        $hotel["parking"] == null;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -81,10 +85,12 @@
                     <th scope="col">Descrizione:</th>         
                     <td><?php echo $hotel['description']; ?></td>
                 </tr>
+                <?php if ($hotel['parking']):  ?>
                 <tr>  
                     <th scope="col">Parking:</th>         
                     <td><?php echo $hotel['parking']; ?></td>
                 </tr>
+                <?php endif; ?>
                 <tr>  
                     <th scope="col">Voto:</th>         
                     <td><?php echo $hotel['vote']; ?></td>
